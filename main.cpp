@@ -1,10 +1,19 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 class Postscript {
+private:
+	fstream f;
 public:
+	Postscript (string filename) {
+		f = fstream(filename);
+	}
 
+	void line (int x1, int y1, int x2, int y2) {
+		f << x1 << ' ' << y1 << " moveto " << x2 << ' ' << y2 << " lineto stroke\n";
+	}
 };
 
 int main() {
