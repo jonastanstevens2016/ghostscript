@@ -1,3 +1,8 @@
+/**
+ * Authors:
+	Chushen Tan,
+	Lijin Shen
+ */
 #include <iostream>
 #include <fstream>
 #include <string>
