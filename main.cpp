@@ -21,11 +21,11 @@ public:
 	}
 
 	void drawRect(int x, int y, int w, int h){
-		f << "newpath\n" << x << ' '<< y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h << " lineto " << x + w << ' ' << y << " lineto closepath stroke";
+		f << "newpath " << x << ' '<< y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h << " lineto " << x + w << ' ' << y << " lineto closepath stroke\n";
 	}
 
 	void fillRect(int x, int y, int w, int h){
-		f << "newpath\n" << x << ' '<< y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h << " lineto " << x + w << ' ' << y << " lineto closepath fill";
+		f << "newpath\n" << x << ' '<< y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h << " lineto " << x + w << ' ' << y << " lineto closepath fill\n";
 	}
 };
 
