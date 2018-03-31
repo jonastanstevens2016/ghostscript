@@ -49,7 +49,7 @@ public:
 	}
 
 	void drawCircle (int x, int y, int r) {
-		f << "newpath\n" << x << ' ' << y << " 0 360 " << r << " arc stroke\n";
+		f << "newpath\n" << x << ' ' << y << " 5 0 360 " << r << " arc stroke\n";
 	}
 
 	void text (int x, int y, string words) {
