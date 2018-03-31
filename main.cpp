@@ -1,3 +1,8 @@
+/**
+ * Authors:
+	Chushen Tan,
+	Lijin Shen
+ */
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -60,6 +65,15 @@ public:
 		f << "/Times-Roman findfont 12 scalefont setfont newpath " << x << " " << y << " moveto (" << words <<") show\n";
 	}
 
+
+	void setFillColor (int r, int g, int b) {
+		setColor(r, g, b);
+	}
+
+	void setStrokeColor (int r, int g, int b) {
+		setColor(r, g, b);
+	}
+
 };
 
 int main() {
@@ -71,14 +85,14 @@ int main() {
 	p.drawRect(0, 0, 200, 200);   // x y moveto x+w y lineto x+w y+h lineto ... closepath stroke
 	p.fillRect(0, 0, 200, 200);   // x y moveto x+w y lineto x+w y+h lineto ... closepath fill
 
-//  p.setFillColor(int r, int g, int b); // 1.0 0.5 0 setrgbcolor
+ 	p.setFillColor(10, 10, 10); // 1.0 0.5 0 setrgbcolor
 //
 //  // optional, figure out how you want to manage color
-//  p.setStrokeColor(int r, int g, int b);
-  p.drawTriangle(10, 10, 50, 50, 10, 30);
-  p.fillTriangle(10, 10, 50, 50, 10, 30);
-  p.drawCircle(10, 10, 20); // x y 0 360 r arc stroke
-  p.text(0, 0, "testing testing 123"); // look it up  setfont  (ABC) show
+ 	p.setStrokeColor(10, 10, 10);
+	p.drawTriangle(10, 10, 50, 50, 10, 30);
+	p.fillTriangle(10, 10, 50, 50, 10, 30);
+	p.drawCircle(10, 10, 20); // x y 0 360 r arc stroke
+	p.text(0, 0, "testing testing 123"); // look it up  setfont  (ABC) show
 //
 //  p.grid(300, 50, 500, 400, 50, 700);
 }
