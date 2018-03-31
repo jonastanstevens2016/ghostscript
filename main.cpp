@@ -53,7 +53,7 @@ public:
 	}
 
 	void text (int x, int y, string words) {
-		f << "newpath\n" << x << ' ' << y << " moveto \n" << '(' << words << ')' << " show\n";
+		f << "/Times-Roman findfont 12 scalefont setfont newpath " << x << " " << y << " moveto (" << words <<") show\n";
 	}
 };
 
