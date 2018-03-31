@@ -17,15 +17,18 @@ public:
 		f << 'newpath\n' << x1 << ' ' << y1 << " moveto " << x2 << ' ' << y2 << " lineto stroke\n";
 	}
 
+	// Chushen Tan
 	void setColor(int r, int g, int b) {
 		f << r << ' ' << g << ' ' << b << ' ' << "setrgbcolor\n";
 	}
 
+	//Chushen Tan
 	void drawRect(int x, int y, int w, int h) {
 		f << "newpath " << x << ' ' << y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h
 		  << " lineto " << x + w << ' ' << y << " lineto closepath stroke\n";
 	}
 
+	// Chushen Tan
 	void fillRect(int x, int y, int w, int h) {
 		f << "newpath\n" << x << ' ' << y << " moveto " << x << ' ' << y + h << " lineto " << x + w << ' ' << y + h
 		  << " lineto " << x + w << ' ' << y << " lineto closepath fill\n";
@@ -33,6 +36,7 @@ public:
 
 
 
+	// Chushen Tan
 	~Postscript(){
 		f.flush();
 		f.close();
@@ -55,6 +59,7 @@ public:
 	void text (int x, int y, string words) {
 		f << "/Times-Roman findfont 12 scalefont setfont newpath " << x << " " << y << " moveto (" << words <<") show\n";
 	}
+
 };
 
 int main() {
